@@ -1,24 +1,12 @@
 Rails.application.routes.draw do
-  get 'dose/index'
-  get 'dose/new'
-  get 'dose/create'
-  get 'dose/destroy'
-  get 'dose/show'
-  get 'dose/edit'
-  get 'dose/update'
-  get 'ingredient/index'
-  get 'ingredient/new'
-  get 'ingredient/create'
-  get 'ingredient/destroy'
-  get 'ingredient/show'
-  get 'ingredient/edit'
-  get 'ingredient/update'
-  get 'cocktail/index'
-  get 'cocktail/new'
-  get 'cocktail/create'
-  get 'cocktail/destroy'
-  get 'cocktail/show'
-  get 'cocktail/edit'
-  get 'cocktail/update'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :cocktails, only: [:index, :new, :create, :show] do
+    # c est pour avoir le l'id du cocktail dans le chemin,
+    # comme ca on le recupere dans le html
+    #  /cocktails/id/dose
+    resources :doses, only: [:new, :create]
+  end
+  resources :doses, only: [:destroy]
+
+  # le to: en dessous n'est pas obligatoire
+  root to: 'cocktails#index'
 end

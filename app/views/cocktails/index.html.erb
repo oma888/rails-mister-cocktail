@@ -1,0 +1,13 @@
+<div class="ma-liste">
+
+  <% @cocktails.each do |cocktail| %>
+
+   <div class="ma-liste">
+     <%= render "shared/card", cocktail: cocktail %>
+   </div>
+
+  <% end  %>
+
+</div>
+
+<button name="new" onclick="window.location.href =('cocktails/new')" type="button" class="btn btn-primary">Ajouter un coktail</button>
