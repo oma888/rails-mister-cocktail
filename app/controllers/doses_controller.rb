@@ -21,7 +21,7 @@ class DosesController < ApplicationController
     # @ingredient = Ingredient.find(@dose.ingredient)
     # @cocktail = Cocktail.find(@ingredient.coktail)
     @dose.delete
-    redirect_to coktail_path(@cocktail)
+    redirect_to cocktail_path(@cocktail)
   end
 
   private

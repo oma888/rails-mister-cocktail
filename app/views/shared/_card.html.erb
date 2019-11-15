@@ -1,11 +1,15 @@
 <div class="card-trip">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <%= cl_image_tag cocktail.photo, crop: :fill %>
+
   <div class="card-trip-infos">
     <div>
       <h2></h2>
-      <p><% cocktail.name %></p>
+      <p><%= cocktail.name %></p>
     </div>
-    <h2 class="card-trip-pricing">10@</h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    <h2 class="card-trip-pricing">10 €</h2>
+    <%= link_to "More...", cocktail_path(cocktail), class: "btn btn-primary mr-4" %>
   </div>
+
 </div>
+
+
