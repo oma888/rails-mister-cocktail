@@ -1,13 +1,14 @@
-<div class="ma-liste">
-
-  <% @cocktails.each do |cocktail| %>
-
-   <div class="ma-liste">
-     <%= render "shared/card", cocktail: cocktail %>
-   </div>
-
-  <% end  %>
-
+<%= render 'shared/banner' %>
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-md-6">
+        <%= render 'shared/card', cocktail: cocktail %>
+      </div>
+    <% end %>
+  </div>
 </div>
 
-<button name="new" onclick="window.location.href =('cocktails/new')" type="button" class="btn btn-primary">Ajouter un coktail</button>
+
+
+
