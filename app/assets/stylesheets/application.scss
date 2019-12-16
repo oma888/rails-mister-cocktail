@@ -12,3 +12,12 @@
 @import "components/index";
 @import "pages/index";
 @import "pages"; /* Will import `_pages.scss` */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.full-screen {
+  min-height: 80vh;
+}

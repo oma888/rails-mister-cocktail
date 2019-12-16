@@ -1,12 +1,12 @@
-<div class="card-trip">
+<div class="card-cocktail">
   <%= cl_image_tag cocktail.photo, crop: :fill %>
 
-  <div class="card-trip-infos">
+  <div class="card-cocktail-infos">
     <div>
       <h2></h2>
       <p><%= cocktail.name %></p>
     </div>
-    <h2 class="card-trip-pricing">10 €</h2>
+    <h2 class="card-cocktail-pricing">10 €</h2>
     <%= link_to "More...", cocktail_path(cocktail), class: "btn btn-primary mr-4" %>
   </div>
 
