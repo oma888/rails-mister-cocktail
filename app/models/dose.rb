@@ -1,3 +1,4 @@
+# class de la Dose des ingredients entrant dans la compo des cocktails
 class Dose < ApplicationRecord
   belongs_to :cocktail
   belongs_to :ingredient
