@@ -1,15 +1,23 @@
-<div class="oli-div">
-  <div class="card-cocktail mt-4">
-    <h1>Créez votre cocktail</h1>
-    <%= simple_form_for @cocktail do |f| %>
-      <%= f.input :name, label: 'Indique le nom du cocktail :', class: "d-flex" %>
-      <%= f.input :photo %>
+<div class="header__bg"></div>
+  <div class="container align-items-center mt-4">
 
-      <%= f.input :photo_cache, as: :hidden %>
-      <%= f.submit class: "btn btn-primary mb-2 ml-2" %>
-    <% end %>
+    <div class="card-new-review text-center mx-3"style="height: 430px; width:500px; box-shadow: 0 2px 14px rgba(126,87,88,.1), 0 3px 6px rgba(0,0,0,.08);">
+      <h4>Créez votre cocktail</h4>
+        <div class="col-4 col-sm-offset-4 px-4" id="review-form">
+          <br>
+          <%= simple_form_for @cocktail do |f| %>
+            <%= f.input :name, label: 'Indique le nom du cocktail :' %>
+            <%= f.input :photo, text: 'Photo...',  class: "btn btn-primary mb-2 ml-2" %>
 
+            <%= f.input :photo_cache, as: :hidden %>
+            <%= f.submit class: "btn btn-primary mb-2 ml-2" %>
+          <% end %>
+          <br>
+        </div>
+
+        <div class="card-cocktail" style="width:300px; height:200px;">
+          <%= cl_image_tag @cocktail.photo, crop: :fill %>
+        </div>
+    </div>
   </div>
-
-</div>
 

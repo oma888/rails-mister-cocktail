@@ -16,3 +16,60 @@
 // h1, h2 {
 //   text-align: center;
 // }
+.card-new-review {
+  background-color: $light-gray;
+  border-radius: 20px;
+  // height:300px;
+  // width:600px;
+  padding-top:50px;
+  padding-bottom: 50px;
+  padding-right: 50px;
+  padding-left: 50px;
+
+}
+// Specific CSS for your home-page
+body {
+  background-color: #F6F9FC;
+}
+
+.btn-hp {
+  border: none;
+  background-color: #4281A4;
+  border-radius: 50px;
+}
+
+.btn-hp:hover {
+  background-color: #3b718e;
+}
+
+#review-form .form-control {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.signin-form .form-control {
+  width: 100%;
+}
+
+.signup-form .form-control {
+  width: 100%;
+}
+
+.header__bg {
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+
+  background-image: linear-gradient(#4281A4, #4281A4);
+  transform: skewY(-25deg);
+
+  transform-origin: top left;
+}
+
